@@ -4,6 +4,6 @@ public class MathApp {
 
     public static void main(String[] args) {
         TypePromoter promoter = new TypePromoter();
-        promoter.printInput("Start");
+        promoter.printInput("run");
     }
 }

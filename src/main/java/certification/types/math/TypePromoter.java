@@ -1,6 +1,6 @@
 package certification.types.math;
 
-import java.util.InputMismatchException;
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class TypePromoter {
@@ -9,26 +9,29 @@ public class TypePromoter {
 
 
     public void printInput(String command) {
-        if (command.equalsIgnoreCase("stop")) return;
+        if (!command.equalsIgnoreCase("run")) return;
         System.out.println("Enter an integer");
         var num = scanner.nextLine();
-        scanner.nextLine();
-        int number = 0;
         try {
-            number = Integer.parseInt(num);
-            printNum(number);
-            System.out.println("Enter your next command");
-            String nextCommand = scanner.nextLine();
-            printInput(nextCommand);
-        } catch (InputMismatchException e) {
-            printNum((long) number);
-            printInput(command);
-        } catch (NumberFormatException e) {
-            System.out.println("You did not enter a number. Please enter a number");
-            scanner.nextLine();
-            printInput(command);
+            printNum(Integer.parseInt(num));
+            executePrintCommand();
         }
-
+        catch (NumberFormatException failedParseInt) {
+            try {
+                printNum(Long.parseLong(num));
+                executePrintCommand();
+            }
+            catch (NumberFormatException failedParseLong) {
+                try {
+                    printNum(new BigInteger(num));
+                    executePrintCommand();
+                }
+                catch (NumberFormatException failedParseBigInteger) {
+                    System.out.println("You did not enter a number. Please enter a number");
+                    executePrintCommand();
+                }
+            }
+        }
     }
 
     public void printNum(int d) {
@@ -39,6 +42,14 @@ public class TypePromoter {
         System.out.println("Printed long: " + d);
     }
 
+    public void printNum(BigInteger d) {
+        System.out.println("Printed BigInteger: " + d);
+    }
 
+    private void executePrintCommand() {
+        System.out.println("Enter your next command");
+        String nextCommand = scanner.nextLine();
+        printInput(nextCommand);
+    }
 
 }
