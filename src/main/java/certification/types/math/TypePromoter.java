@@ -22,28 +22,15 @@ public class TypePromoter {
                 executePrintCommand();
             }
             catch (NumberFormatException failedParseLong) {
-                try {
-                    printNum(new BigInteger(num));
+                    System.out.println("Your value is too big");
                     executePrintCommand();
-                }
-                catch (NumberFormatException failedParseBigInteger) {
-                    System.out.println("You did not enter a number. Please enter a number");
-                    executePrintCommand();
-                }
+
             }
         }
     }
 
-    public void printNum(int d) {
-        System.out.println("Printed int: " + d);
-    }
-
     public void printNum(long d) {
         System.out.println("Printed long: " + d);
-    }
-
-    public void printNum(BigInteger d) {
-        System.out.println("Printed BigInteger: " + d);
     }
 
     private void executePrintCommand() {
