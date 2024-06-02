@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**The entire purpose of this REPOSITORY is testing stuff
     There are many cases that validations and handlings are missing,
-        as the focus is not creating a business level application**/
+        as the focus is not creating a business level application, but rather learning and re-learning**/
 
 public class GenericsApp {
     public static void main(String[] args) {
