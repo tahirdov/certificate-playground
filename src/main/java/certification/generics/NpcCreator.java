@@ -11,9 +11,7 @@ public class NpcCreator {
 
     public void runNpcManagementLobby(String command) {
         switch (command) {
-            case "exit" -> {
-                System.out.println("Shutting down");
-            }
+            case "exit" -> System.out.println("Shutting down");
             case "create" -> startCreatingNpc();
             case "print" -> printNpcList();
             default -> {
@@ -28,9 +26,7 @@ public class NpcCreator {
     private void startCreatingNpc() {
         System.out.println("Starting to create an NPC");
         System.out.println("Please specify NPC type: W (warrior), M (merchant)");
-        String npcType = scanner.nextLine();
-        scanner.nextLine();
-        createNpc(npcType);
+        createNpc(scanner.nextLine());
     }
 
     private void createNpc(String type) {
@@ -92,9 +88,9 @@ public class NpcCreator {
         String npcName = scanner.nextLine();
         System.out.println("Enter NPC age");
         int age = scanner.nextInt();
+        scanner.nextLine();
         System.out.println("Enter NPC gender");
         String gender = scanner.nextLine();
-        scanner.nextLine();
         System.out.println("Enter NPC race");
         String race = scanner.nextLine();
         System.out.println("Enter NPC faction");

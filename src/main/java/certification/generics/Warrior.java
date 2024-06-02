@@ -28,7 +28,7 @@ public class Warrior extends Npc {
 
     @Override
     public String toString() {
-        return String.format("Name: %s, Age: %d, Gender: %s, Race: %s, Faction: %s, HP: %d, Armour: %d, Strength: %d",
+        return String.format("[Name: %s, Age: %d, Gender: %s, Race: %s, Faction: %s, HP: %d, Armour: %d, Strength: %d]",
                 super.getName(), super.getAge(), super.getGender(), super.getRace(), super.getFaction(), this.HP, this.armour, this.strength);
 
     }

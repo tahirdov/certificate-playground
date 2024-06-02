@@ -15,7 +15,7 @@ public class Merchant extends Npc {
 
     @Override
     public String toString() {
-        return String.format("Name: %s, Age: %d, Gender: %s, Race: %s, Faction: %s, Gold: %d",
+        return String.format("[Name: %s, Age: %d, Gender: %s, Race: %s, Faction: %s, Gold: %d]",
                 super.getName(), super.getAge(), super.getGender(), super.getRace(), super.getFaction(), this.gold);
 
     }
