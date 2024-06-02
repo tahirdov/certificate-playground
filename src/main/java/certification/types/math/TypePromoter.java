@@ -1,6 +1,5 @@
 package certification.types.math;
 
-import java.math.BigInteger;
 import java.util.Scanner;
 
 public class TypePromoter {
@@ -29,7 +28,7 @@ public class TypePromoter {
         }
     }
 
-    public void printNum(long d) {
+    private void printNum(long d) {
         System.out.println("Printed long: " + d);
     }
 
