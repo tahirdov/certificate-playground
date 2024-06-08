@@ -23,11 +23,11 @@ public class AzeLocalizer {
     public String getMessage(String key){
         return resourceBundle.getString(key);
     }
-    public double getFormattedCurrency(double amount) {
-        return Double.parseDouble(currencyFormatter.format(amount));
+    public String getFormattedCurrency(double amount) {
+        return currencyFormatter.format(amount);
     }
 
     public LocalDateTime getFormattedDate(LocalDateTime localDateTime) {
-        return LocalDateTime.parse(dateTimeFormatter.format(localDateTime));
+        return LocalDateTime.parse(dateTimeFormatter.format(localDateTime), dateTimeFormatter);
     }
 }
