@@ -1,4 +1,4 @@
-package certification.types.math;
+package certification.types;
 
 /**The entire purpose of this REPOSITORY is testing stuff
     There are many cases that validations and handlings are missing,

@@ -1,4 +1,4 @@
-package certification.types.math;
+package certification.types;
 
 import java.util.Scanner;
 
