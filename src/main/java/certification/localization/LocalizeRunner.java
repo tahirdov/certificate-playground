@@ -16,8 +16,6 @@ public class LocalizeRunner {
     }
 
     private void printLocalizedData(LocalDateTime localDateTime) {
-        Charset utf8 = StandardCharsets.UTF_8;
-
         System.out.printf("%s %s %s", azeLocalizer.getMessage("print.date").toUpperCase(),
                                     StandardCharsets.UTF_8.encode(azeLocalizer.getMessage("print.message")), azeLocalizer.getFormattedDate(localDateTime));
         System.out.println();
