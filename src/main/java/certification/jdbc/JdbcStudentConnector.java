@@ -21,7 +21,7 @@ public class JdbcStudentConnector {
 
     }
 
-    public void createStudent() throws ClassNotFoundException {
+    public void createStudent() {
         List<Student> students = new ArrayList<>();
         try (Connection con = DriverManager.getConnection(connectionDetails.get("url"), connectionDetails.get("user"), connectionDetails.get("password")))
         {
@@ -33,7 +33,7 @@ public class JdbcStudentConnector {
             }
         }
         catch (SQLException e) {
-            System.out.println("SqlException Occured: " + e.getMessage());
+            System.out.println("SqlException Occurred: " + e.getMessage());
         }
         System.out.println(students);
     }
