@@ -14,4 +14,8 @@ public class SqlQueryHandler {
         return "delete from student where id = " + id;
     }
 
+    public String getInsertQuery(){
+        return "insert into student(name, age, gender, faculty) values(?,?,?,?)";
+    }
+
 }

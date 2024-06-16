@@ -3,14 +3,27 @@ package certification.jdbc;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
+
+import static certification.jdbc.JdbcDriverManager.getConnection;
+
 @SuppressWarnings("all")
 public class JdbcStudentConnector {
 
     SqlQueryHandler sqlQueryHandler = new SqlQueryHandler();
 
-    public void createStudent(Student student) {
 
+    public void createStudent(Student student) {
+    try (Connection con = getConnection();
+    PreparedStatement statement = con.prepareStatement(sqlQueryHandler.getInsertQuery())) {
+        statement.setString(2, student.getName());
+        statement.setInt(3, student.getAge());
+        statement.setString(4, student.getGender());
+        statement.setString(5, student.getFaculty());
+        statement.execute();
+    }
+    catch (SQLException e) {
+        System.out.println("SQLException: " + e.getStackTrace());
+    }
     }
 
     public void findStudent(String... arg) {
@@ -39,17 +52,4 @@ public class JdbcStudentConnector {
         System.out.println(students);
     }
 
-    private Connection getConnection(){
-        Map<String, String> connectionDetails = JdbcDriverManager.getConnectionDetails();
-        String url = connectionDetails.get("url");
-        String user = connectionDetails.get("user");
-        String password = connectionDetails.get("password");
-        try(Connection connection = DriverManager.getConnection(url, user, password)){
-            return connection;
-        }
-        catch (SQLException e) {
-            System.out.println("SqlException Occurred: " + e.getStackTrace());
-        }
-
-    }
 }
