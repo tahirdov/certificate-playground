@@ -48,7 +48,13 @@ public class JdbcStudentConnector {
     }
 
     public void deleteStudent(int id) {
-
+        try (Connection connection = getConnection();
+             Statement statement = connection.createStatement()) {
+            statement.execute(sqlQueryHandler.getDeleteQuery(id));
+        }
+        catch (SQLException e) {
+            System.out.println("SQLException: " + e.getStackTrace());
+        }
     }
 
     public void printStudentList() {
