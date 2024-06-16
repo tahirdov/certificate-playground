@@ -55,4 +55,9 @@ public class Student {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return String.format("[Id: %d, Name: %s, Age: %d, Gender: %s, Faculty: %s]", id, name, age, gender, faculty);
+    }
 }

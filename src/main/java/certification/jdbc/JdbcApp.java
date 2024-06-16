@@ -1,5 +1,6 @@
 package certification.jdbc;
 
+
 public class JdbcApp {
 
     public static void main(String[] args) throws ClassNotFoundException {
