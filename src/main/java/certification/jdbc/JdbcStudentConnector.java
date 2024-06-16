@@ -41,7 +41,7 @@ public class JdbcStudentConnector {
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sqlQueryHandler.getBaseSelectQuery());
             while (rs.next()) {
-                students.add(new Student(rs.getInt(1), rs.getString(2), rs.getInt(3),
+                students.add(new Student(rs.getLong(1), rs.getString(2), rs.getInt(3),
                         rs.getString(4), rs.getString(5)));
             }
         }

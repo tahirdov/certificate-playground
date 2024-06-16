@@ -2,6 +2,8 @@ package certification.jdbc;
 
 import certification.utils.Console;
 
+import java.util.List;
+
 public class StudentService implements Console {
 
     JdbcStudentConnector jdbcConnector = new JdbcStudentConnector();
@@ -32,11 +34,16 @@ public class StudentService implements Console {
     }
 
     public void findStudent() {
-
+        System.out.println("Enter student details: ");
+        System.out.println("Enter field name");
     }
 
     public void printStudentList() {
 
+    }
+
+    public boolean doesThisFieldExist(String fieldName) {
+        return List.of("name", "age", "gender", "faculty").contains(fieldName.toLowerCase());
     }
 
 }

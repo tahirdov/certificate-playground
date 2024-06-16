@@ -2,7 +2,7 @@ package certification.jdbc;
 
 public class Student {
 
-    private int id;
+    private Long id;
     private String name;
     private int age;
     private String gender;
@@ -15,7 +15,7 @@ public class Student {
         this.faculty = faculty;
     }
 
-    public Student(int id, String name, int age, String gender, String faculty) {
+    public Student(Long id, String name, int age, String gender, String faculty) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -47,11 +47,11 @@ public class Student {
         this.gender = gender;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
