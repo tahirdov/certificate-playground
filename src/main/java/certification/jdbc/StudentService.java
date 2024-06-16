@@ -2,7 +2,9 @@ package certification.jdbc;
 
 import certification.utils.Console;
 
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class StudentService implements Console {
 
@@ -34,16 +36,28 @@ public class StudentService implements Console {
     }
 
     public void findStudent() {
-        System.out.println("Enter student details: ");
-        System.out.println("Enter field name");
+        Map<String, Object> details = new HashMap<>();
+        System.out.println("Enter the student ID: ");
+        Long id = scanner.nextLong();
+        details.put("id", id);
+        System.out.println("Enter the student name: ");
+        String name = scanner.nextLine();
+        details.put("name", name);
+        System.out.println("Enter the student age: ");
+        int age = scanner.nextInt();
+        details.put("age", age);
+        System.out.println("Enter the student gender: ");
+        String gender = scanner.nextLine();
+        details.put("gender", gender);
+        System.out.println("Enter the student faculty: ");
+        String faculty = scanner.nextLine();
+        details.put("faculty", faculty);
+        jdbcConnector.findStudent(details);
     }
 
     public void printStudentList() {
 
     }
 
-    public boolean doesThisFieldExist(String fieldName) {
-        return List.of("name", "age", "gender", "faculty").contains(fieldName.toLowerCase());
-    }
 
 }

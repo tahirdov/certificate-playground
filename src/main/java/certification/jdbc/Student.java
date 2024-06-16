@@ -8,15 +8,16 @@ public class Student {
     private String gender;
     private String faculty;
 
-    public Student(String name, int age, String gender, String faculty) {
+
+    public Student(Long id, String name, int age, String gender, String faculty) {
+        this.id = id;
         this.name = name;
         this.age = age;
         this.gender = gender;
         this.faculty = faculty;
     }
 
-    public Student(Long id, String name, int age, String gender, String faculty) {
-        this.id = id;
+    public Student(String name, int age, String gender, String faculty) {
         this.name = name;
         this.age = age;
         this.gender = gender;
