@@ -1,4 +1,4 @@
-package certification.generics;
+package certification.lesson3.generics;
 
 import java.util.ArrayList;
 import java.util.List;

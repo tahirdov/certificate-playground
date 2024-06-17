@@ -1,6 +1,6 @@
-package certification.jdbc.consoles;
+package certification.lesson4.jdbc.consoles;
 
-import certification.jdbc.StudentService;
+import certification.lesson4.jdbc.StudentService;
 import certification.utils.Console;
 
 public class JdbcScannerConsole implements Console {

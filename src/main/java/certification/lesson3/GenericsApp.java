@@ -1,4 +1,6 @@
-package certification.generics;
+package certification.lesson3;
+
+import certification.lesson3.generics.NpcCreator;
 
 import java.util.Scanner;
 

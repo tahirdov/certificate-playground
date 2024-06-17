@@ -1,4 +1,4 @@
-package certification.logging;
+package certification.lesson13;
 
 public class LoggingApp {
 

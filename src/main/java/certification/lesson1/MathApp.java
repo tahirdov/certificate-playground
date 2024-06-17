@@ -1,4 +1,6 @@
-package certification.types;
+package certification.lesson1;
+
+import certification.lesson1.types.TypePromoter;
 
 /**The entire purpose of this REPOSITORY is testing stuff
     There are many cases that validations and handlings are missing,

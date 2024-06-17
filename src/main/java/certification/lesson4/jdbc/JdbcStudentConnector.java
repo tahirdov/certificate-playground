@@ -1,11 +1,11 @@
-package certification.jdbc;
+package certification.lesson4.jdbc;
 
-import certification.jdbc.consoles.JdbcScannerConsole;
+import certification.lesson4.jdbc.consoles.JdbcScannerConsole;
 
 import java.sql.*;
 import java.util.*;
 
-import static certification.jdbc.JdbcDriverManager.getConnection;
+import static certification.lesson4.jdbc.JdbcDriverManager.getConnection;
 
 @SuppressWarnings("all")
 public class JdbcStudentConnector {

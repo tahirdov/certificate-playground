@@ -1,6 +1,5 @@
-package certification.localization;
+package certification.lesson2.localization;
 
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 import java.util.concurrent.ThreadLocalRandom;

@@ -1,4 +1,4 @@
-package certification.types;
+package certification.lesson1.types;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package certification.jdbc;
+package certification.lesson4.jdbc;
 
 public class SqlQueryHandler {
 

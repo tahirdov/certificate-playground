@@ -1,4 +1,6 @@
-package certification.localization;
+package certification.lesson2;
+
+import certification.lesson2.localization.LocalizeRunner;
 
 /**The entire purpose of this REPOSITORY is testing stuff
      There are many cases that validations and handlings are missing,

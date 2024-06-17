@@ -1,7 +1,7 @@
-package certification.jdbc;
+package certification.lesson4;
 
 
-import certification.jdbc.consoles.JdbcScannerConsole;
+import certification.lesson4.jdbc.consoles.JdbcScannerConsole;
 
 public class JdbcApp {
 

@@ -1,4 +1,4 @@
-package certification.jdbc;
+package certification.lesson4.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

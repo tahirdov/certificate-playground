@@ -1,4 +1,4 @@
-package certification.generics;
+package certification.lesson3.generics;
 
 public class Warrior extends Npc {
 
