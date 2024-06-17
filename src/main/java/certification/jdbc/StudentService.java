@@ -38,13 +38,19 @@ public class StudentService implements Console {
     public void findStudent() {
         Map<String, Object> details = new HashMap<>();
         System.out.println("Enter the student ID: ");
-        Long id = scanner.nextLong();
+        Long id = null;
+        try{
+            id = Long.valueOf(scanner.nextLine());
+        } catch (NumberFormatException ignored) {}
         details.put("id", id);
         System.out.println("Enter the student name: ");
         String name = scanner.nextLine();
         details.put("name", name);
         System.out.println("Enter the student age: ");
-        int age = scanner.nextInt();
+        Integer age = null;
+        try {
+            age = Integer.valueOf(scanner.nextLine());
+        } catch (NumberFormatException ignored) {}
         details.put("age", age);
         System.out.println("Enter the student gender: ");
         String gender = scanner.nextLine();
@@ -56,7 +62,7 @@ public class StudentService implements Console {
     }
 
     public void printStudentList() {
-
+        jdbcConnector.printStudentList();
     }
 
 

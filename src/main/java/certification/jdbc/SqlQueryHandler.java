@@ -3,19 +3,19 @@ package certification.jdbc;
 public class SqlQueryHandler {
 
     public String getBaseSelectQuery() {
-        return "select * from student";
+        return "select * from students";
     }
 
     public String getBaseSelectQueryWithConditions() {
-        return "select * from student where";
+        return "select * from students where ";
     }
 
     public String getDeleteQuery(int id){
-        return "delete from student where id = " + id;
+        return "delete from students where id = " + id;
     }
 
     public String getInsertQuery(){
-        return "insert into student(name, age, gender, faculty) values(?,?,?,?)";
+        return "insert into students(name, age, gender, faculty) values(?,?,?,?)";
     }
 
 }

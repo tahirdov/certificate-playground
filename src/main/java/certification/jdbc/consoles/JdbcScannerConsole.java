@@ -5,11 +5,12 @@ import certification.utils.Console;
 
 public class JdbcScannerConsole implements Console {
 
-    StudentService studentService = new StudentService();
 
     @Override
     public void getConsole() {
+        printCommands();
         System.out.println("Enter your command: ");
+        StudentService studentService = new StudentService();
         String command = scanner.nextLine();
         switch (command.toLowerCase()) {
             case "run" -> printCommands();
@@ -18,14 +19,15 @@ public class JdbcScannerConsole implements Console {
             case "find" -> studentService.findStudent();
             case "print" -> studentService.printStudentList();
             case "delete" -> studentService.deleteStudent();
+            case "exit" -> System.out.println("Shutting down...");
             default -> {
                 System.out.println("Unknown command: " + command);
-                printCommands();
+                getConsole();
             }
         }
     }
 
     private void printCommands() {
-        System.out.println("Available commands: Create, Update, Find, Print, Delete");
+        System.out.println("Available commands: Create, Update, Find, Print, Delete, Exit");
     }
 }
